@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Tracker</title>
+    <!-- Tailwind and Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="w-10/12 mx-auto">
+    <h2 class="text-5xl text-[#002C5C] font-bold mt-[50px]">Plant Tracker</h2>
+
+    <section
+      class="grid grid-cols-3 gap-4 mt-6 border-b-2 border-gray-300/50 pb-10"
+    >
+      <div class="bg-amber-100 px-6 py-4 rounded-xl">
+        <p>Total</p>
+        <p>4</p>
+      </div>
+      <div class="bg-emerald-100 px-6 py-4 rounded-xl">
+        <p>Thriving</p>
+        <p>0</p>
+      </div>
+      <div class="bg-red-100 px-6 py-4 rounded-xl">
+        <p>Struggling</p>
+        <p>0</p>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <div class="flex justify-between">
+        <div>
+          <button class="btn btn-outline btn-primary">All</button>
+          <button class="btn btn-outline btn-primary">Thriving</button>
+          <button class="btn btn-outline btn-primary">Struggling</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- card container -->
+    <section class="mt-10">
+      <div class="flex justify-between bg-pink-50 p-10 rounded-xl">
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold">Plant name 1</h2>
+          <p>Latin name</p>
+          <p>Bright Indicate</p>
+          <button class="btn btn-outline btn-primary">No Applicable</button>
+          <p>New leaf unfurling by the east window</p>
+          <div class="space-x-3">
+            <button class="btn btn-outline btn-success">Thriving</button>
+            <button class="btn btn-outline btn-secondary">Struggling</button>
+          </div>
+        </div>
+        <div>
+          <i class="fa-regular fa-trash-can"></i>
+        </div>
+      </div>
+    </section>
+
+    <script src="script/plant.js"></script>
+    <!-- <script src="script/script.js"></script> -->
+  </body>
+</html>
