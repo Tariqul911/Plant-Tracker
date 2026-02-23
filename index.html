@@ -21,55 +21,171 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body class="w-10/12 mx-auto">
     <h2 class="text-5xl text-[#002C5C] font-bold mt-[50px]">Plant Tracker</h2>
 
-    <section
+    <!-- Header section -->
+    <header
       class="grid grid-cols-3 gap-4 mt-6 border-b-2 border-gray-300/50 pb-10"
     >
       <div class="bg-amber-100 px-6 py-4 rounded-xl">
         <p>Total</p>
-        <p>4</p>
+        <p id="total">0</p>
       </div>
       <div class="bg-emerald-100 px-6 py-4 rounded-xl">
         <p>Thriving</p>
-        <p>0</p>
+        <p id="thriving-count">0</p>
       </div>
       <div class="bg-red-100 px-6 py-4 rounded-xl">
         <p>Struggling</p>
-        <p>0</p>
+        <p id="struggling-count">0</p>
       </div>
-    </section>
+    </header>
 
-    <section class="mt-10">
-      <div class="flex justify-between">
-        <div>
-          <button class="btn btn-outline btn-primary">All</button>
-          <button class="btn btn-outline btn-primary">Thriving</button>
-          <button class="btn btn-outline btn-primary">Struggling</button>
-        </div>
-      </div>
-    </section>
+    <!-- All | Thriving | Struggling button -->
+    <main>
+      <div class="mt-10">
+        <div class="flex justify-between">
+          <div>
+            <button
+              onclick="toggleStyle('all-filter-btn')"
+              id="all-filter-btn"
+              class="btn btn-outline btn-primary"
+            >
+              All
+            </button>
 
-    <!-- card container -->
-    <section class="mt-10">
-      <div class="flex justify-between bg-pink-50 p-10 rounded-xl">
-        <div class="space-y-4">
-          <h2 class="text-2xl font-bold">Plant name 1</h2>
-          <p>Latin name</p>
-          <p>Bright Indicate</p>
-          <button class="btn btn-outline btn-primary">No Applicable</button>
-          <p>New leaf unfurling by the east window</p>
-          <div class="space-x-3">
-            <button class="btn btn-outline btn-success">Thriving</button>
-            <button class="btn btn-outline btn-secondary">Struggling</button>
+            <button
+              onclick="toggleStyle('thriving-filter-btn')"
+              id="thriving-filter-btn"
+              class="btn btn-outline btn-primary"
+            >
+              Thriving
+            </button>
+
+            <button
+              onclick="toggleStyle('struggling-filter-btn')"
+              id="struggling-filter-btn"
+              class="btn btn-outline btn-primary"
+            >
+              Struggling
+            </button>
           </div>
         </div>
-        <div>
-          <i class="fa-regular fa-trash-can"></i>
-        </div>
       </div>
-    </section>
+
+      <!-- card container -->
+      <section id="allCards" class="mt-10 space-y-6">
+        <!-- 1st card -->
+        <div class="flex justify-between bg-pink-50 p-10 rounded-xl">
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold">Plant name 1</h2>
+            <p>Latin name</p>
+            <p>Bright Indicate</p>
+            <button class="btn btn-outline btn-primary">No Applicable</button>
+            <p>New leaf unfurling by the east window</p>
+            <div class="space-x-3">
+              <button class="btn btn-outline btn-success">Thriving</button>
+              <button class="btn btn-outline btn-secondary">Struggling</button>
+            </div>
+          </div>
+          <div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        </div>
+
+        <!-- 2nd card -->
+        <div class="flex justify-between bg-pink-50 p-10 rounded-xl">
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold">Plant name 1</h2>
+            <p>Latin name</p>
+            <p>Bright Indicate</p>
+            <button class="btn btn-outline btn-primary">No Applicable</button>
+            <p>New leaf unfurling by the east window</p>
+            <div class="space-x-3">
+              <button class="btn btn-outline btn-success">Thriving</button>
+              <button class="btn btn-outline btn-secondary">Struggling</button>
+            </div>
+          </div>
+          <div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        </div>
+
+        <!-- 3rd card -->
+        <div class="flex justify-between bg-pink-50 p-10 rounded-xl">
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold">Plant name 1</h2>
+            <p>Latin name</p>
+            <p>Bright Indicate</p>
+            <button class="btn btn-outline btn-primary">No Applicable</button>
+            <p>New leaf unfurling by the east window</p>
+            <div class="space-x-3">
+              <button class="btn btn-outline btn-success">Thriving</button>
+              <button class="btn btn-outline btn-secondary">Struggling</button>
+            </div>
+          </div>
+          <div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        </div>
+
+        <!-- 4th card -->
+        <div class="flex justify-between bg-pink-50 p-10 rounded-xl">
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold">Plant name 1</h2>
+            <p>Latin name</p>
+            <p>Bright Indicate</p>
+            <button class="btn btn-outline btn-primary">No Applicable</button>
+            <p>New leaf unfurling by the east window</p>
+            <div class="space-x-3">
+              <button class="btn btn-outline btn-success">Thriving</button>
+              <button class="btn btn-outline btn-secondary">Struggling</button>
+            </div>
+          </div>
+          <div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        </div>
+
+        <!-- 5th card -->
+        <div class="flex justify-between bg-pink-50 p-10 rounded-xl">
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold">Plant name 1</h2>
+            <p>Latin name</p>
+            <p>Bright Indicate</p>
+            <button class="btn btn-outline btn-primary">No Applicable</button>
+            <p>New leaf unfurling by the east window</p>
+            <div class="space-x-3">
+              <button class="btn btn-outline btn-success">Thriving</button>
+              <button class="btn btn-outline btn-secondary">Struggling</button>
+            </div>
+          </div>
+          <div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        </div>
+
+        <!-- 6th card -->
+        <div class="flex justify-between bg-pink-50 p-10 rounded-xl">
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold">Plant name 1</h2>
+            <p>Latin name</p>
+            <p>Bright Indicate</p>
+            <button class="btn btn-outline btn-primary">No Applicable</button>
+            <p>New leaf unfurling by the east window</p>
+            <div class="space-x-3">
+              <button class="btn btn-outline btn-success">Thriving</button>
+              <button class="btn btn-outline btn-secondary">Struggling</button>
+            </div>
+          </div>
+          <div>
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="script/plant.js"></script>
     <!-- <script src="script/script.js"></script> -->
